@@ -10,8 +10,8 @@ __pycache__/
 .pytest_cache/
 
 
-# Claude Code skills（junction，指向 .agents/skills）
-.claude/skills
+# Claude Code（本機快取、設定與 junction）
+.claude/
 
 # Skill 產出（會議紀錄等，可能含會議內容）
 output/
