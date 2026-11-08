@@ -9,6 +9,8 @@
 - 💬 紀錄產生後可以繼續追問，例如「哪些單位被分配到工作？」「幫我寫成提醒信」
 - 支援 .m4a、.mp3、.wav 等常見錄音格式，不限會議類型（業務會議、座談、訪談、教育訓練都可以）
 
+> 第一次使用前，請先完成文件後半段的〈[第一次使用前的設定](#第一次使用前的設定可請講師協助)〉，或請講師協助。
+
 ## 第一步：產生會議紀錄
 
 在 AI 助理的對話框輸入：
@@ -70,11 +72,19 @@ AI 助理會跳出選單問你 4 個問題。**不確定怎麼選時，每題都
 
 ## 第一次使用前的設定（可請講師協助）
 
-以下步驟每台電腦只需要做一次，請在專案資料夾開啟 PowerShell 執行。
+以下步驟每台電腦只需要做一次，請開啟 PowerShell 依序執行。
 
-1. **安裝 [uv](https://docs.astral.sh/uv/)**，並安裝專案需要的套件：
+0. **下載專案**，並進入專案資料夾（之後的指令都在這個資料夾執行）：
 
    ```powershell
+   git clone https://github.com/gemini960114/ai-workshop-meeting-assistant.git
+   cd ai-workshop-meeting-assistant
+   ```
+
+1. **安裝 [uv](https://docs.astral.sh/uv/)**（已安裝可跳過；裝完要重新開啟 PowerShell），再安裝專案需要的套件：
+
+   ```powershell
+   winget install astral-sh.uv
    uv sync
    ```
 
@@ -84,7 +94,7 @@ AI 助理會跳出選單問你 4 個問題。**不確定怎麼選時，每題都
    Copy-Item .env.example .env
    ```
 
-3. **安裝 ffmpeg**（處理錄音檔需要），裝好後重新開啟 PowerShell 確認：
+3. **安裝 ffmpeg**（處理錄音檔需要；已安裝可跳過），裝好後重新開啟 PowerShell 確認：
 
    ```powershell
    winget install Gyan.FFmpeg
@@ -103,7 +113,7 @@ AI 助理會跳出選單問你 4 個問題。**不確定怎麼選時，每題都
    Get-ChildItem .claude\skills\meeting-assistant
    ```
 
-   完成後重新開啟 Claude Code（或在 VS Code 重新載入視窗）。
+   完成後重新開啟 Claude Code（或在 VS Code 按 `Ctrl+Shift+P`，選 `Developer: Reload Window`）。在對話框輸入 `/`，看得到 `meeting-assistant` 就代表設定成功，也可以直接輸入 `/meeting-assistant` 叫用。專案規則 `AGENTS.md` 會自動載入，不用另外設定。
 
    - `.claude/skills` 不會被上傳到 GitHub；技能只要在 `.agents/skills/` 維護即可。
    - 要移除連結（只刪連結，不會刪到技能內容）：
