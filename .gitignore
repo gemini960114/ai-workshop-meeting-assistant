@@ -1,0 +1,17 @@
+# Environment & Secrets
+.env
+*.key
+
+# Python / uv
+.venv/
+__pycache__/
+*.py[cod]
+.ruff_cache/
+.pytest_cache/
+
+
+# Claude Code skills（junction，指向 .agents/skills）
+.claude/skills
+
+# Skill 產出（會議紀錄等，可能含會議內容）
+output/
