@@ -1,7 +1,7 @@
 [project]
-name = "niar-class-20261109"
+name = "ai-workshop-meeting-assistant"
 version = "0.1.0"
-description = "NIAR 課程範例：使用 NCHC GenAI Portal 模型與 Agent Skill 進行錄音轉寫與會議紀錄"
+description = "AI Workshop：使用 NCHC GenAI Portal 模型與 Agent Skill 進行錄音轉寫與會議紀錄"
 readme = "README.md"
 authors = [
     { name = "gemini960114", email = "232852412+gemini960114@users.noreply.github.com" }
